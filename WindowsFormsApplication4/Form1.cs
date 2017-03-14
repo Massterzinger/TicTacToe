@@ -9,16 +9,17 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication4
 {
-    
+
     public partial class Form1 : Form
     {
         string[,] a;
         string[] b;
-        int i = 0;
+        int TurnCount = 0;
         Graphics gr;
+        Pen p;
         Draw_Krest dr;
         bool[] prov;
-        bool pp;
+        bool DrawFlag;
         public Form1()
         {
             InitializeComponent();
@@ -27,12 +28,13 @@ namespace WindowsFormsApplication4
             a = new string[3, 3];
             b = new string[8];
             prov = new bool[9];
-            pp = new bool();
+            DrawFlag = new bool();
+            p = new Pen(Color.Red, 5);
             this.ClearAll();
         }
         public void ClearAll()
         {
-            i = 0;
+            TurnCount = 0;
             for (int z = 0; z < 3; z++)
                 for (int j = 0; j < 3; j++)
                 {
@@ -56,7 +58,7 @@ namespace WindowsFormsApplication4
                 for (int j = 0; j < 3; j++)
                 {
                     if (a[z, j] == "X")
-                        dr.DrawKrest(p, (this.ClientRectangle.Width / 3) * j , (this.ClientRectangle.Height / 3) * z, this.ClientRectangle.Width / 3, this.ClientRectangle.Height / 3, gr);
+                        dr.DrawKrest(p, (this.ClientRectangle.Width / 3) * j, (this.ClientRectangle.Height / 3) * z, this.ClientRectangle.Width / 3, this.ClientRectangle.Height / 3, gr);
                     if (a[z, j] == "O")
                         gr.DrawEllipse(p, (this.ClientRectangle.Width / 3) * j, (this.ClientRectangle.Height / 3) * z, this.ClientRectangle.Width / 3, this.ClientRectangle.Height / 3);
                 }
@@ -67,13 +69,13 @@ namespace WindowsFormsApplication4
         }
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
-            Pen p = new Pen(Color.Red, 5);
+
             for (int z = 0; z < 3; z++)
                 for (int j = 0; j < 3; j++)
                 {
                     if (e.X > (this.ClientRectangle.Width / 3) * j && e.X < (this.ClientRectangle.Width / 3) * (j + 1) && e.Y > (this.ClientRectangle.Width / 3) * z && e.Y < (this.ClientRectangle.Width / 3) * (z + 1) && a[z, j] == "")
                     {
-                        if (i % 2 == 0)
+                        if (TurnCount % 2 == 0)
                         {
                             a[z, j] = "X";
                         }
@@ -81,10 +83,11 @@ namespace WindowsFormsApplication4
                         {
                             a[z, j] = "O";
                         }
-                        i++;
+                        TurnCount++;
                     }
                 }
             Form1_Paint(sender, new PaintEventArgs(gr, this.ClientRectangle));
+
             b[0] = a[0, 0] + a[0, 1] + a[0, 2];
             b[1] = a[1, 0] + a[1, 1] + a[1, 2];
             b[2] = a[2, 0] + a[2, 1] + a[2, 2];
@@ -95,20 +98,25 @@ namespace WindowsFormsApplication4
             //---------------
             b[6] = a[0, 0] + a[1, 1] + a[2, 2];
             b[7] = a[0, 2] + a[1, 1] + a[2, 0];
+            DrawFlag = true;
             for (int x = 0; x < 8; x++)
             {
                 if (b[x] == "XXX" || b[x] == "OOO")
                 {
-                    MessageBox.Show("The Winner is = "+b[x][0]);
+                    MessageBox.Show("The Winner is = " + b[x][0]);
                     this.ClearAll();
                     Form1_Paint(sender, new PaintEventArgs(gr, this.ClientRectangle));
+                    DrawFlag = false;
                 }
             }
-            if (pp == true)
+            if (TurnCount == 9)
             {
-                this.ClearAll();
-                MessageBox.Show("Draw!");
-                Form1_Paint(sender, new PaintEventArgs(gr, this.ClientRectangle));
+                if (DrawFlag)
+                {
+                    this.ClearAll();
+                    MessageBox.Show("Draw!");
+                    Form1_Paint(sender, new PaintEventArgs(gr, this.ClientRectangle));
+                }
             }
         }
     }
