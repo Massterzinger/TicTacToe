@@ -32,11 +32,10 @@ C:\Users\User\Desktop\Krest-Nol\WindowsFormsApplication4\obj\x86\Debug\WindowsFo
 C:\Users\User\Desktop\Krest-Nol\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.Properties.Resources.resources
 C:\Users\User\Desktop\Krest-Nol\WindowsFormsApplication4\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\User\Desktop\Krest-Nol\WindowsFormsApplication4\obj\x86\Debug\GenerateResource.write.1.tlog
-D:\MyMade\vs\Krest-Nol\Krest-Nol\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.exe
-D:\MyMade\vs\Krest-Nol\Krest-Nol\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.pdb
-D:\MyMade\vs\Krest-Nol\Krest-Nol\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe
-D:\MyMade\vs\Krest-Nol\Krest-Nol\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.pdb
-D:\MyMade\vs\Krest-Nol\Krest-Nol\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.csprojResolveAssemblyReference.cache
 D:\MyMade\vs\Krest-Nol\Krest-Nol\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.Form1.resources
-D:\MyMade\vs\Krest-Nol\Krest-Nol\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.Properties.Resources.resources
 D:\MyMade\vs\Krest-Nol\Krest-Nol\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.csproj.GenerateResource.Cache
+D:\MyMade\vs\Krest-Nol\Krest-Nol\WindowsFormsApplication4\bin\Debug\TicTacToeGame.exe
+D:\MyMade\vs\Krest-Nol\Krest-Nol\WindowsFormsApplication4\bin\Debug\TicTacToeGame.pdb
+D:\MyMade\vs\Krest-Nol\Krest-Nol\WindowsFormsApplication4\obj\x86\Debug\TicTacToeGameNS.Properties.Resources.resources
+D:\MyMade\vs\Krest-Nol\Krest-Nol\WindowsFormsApplication4\obj\x86\Debug\TicTacToeGame.exe
+D:\MyMade\vs\Krest-Nol\Krest-Nol\WindowsFormsApplication4\obj\x86\Debug\TicTacToeGame.pdb

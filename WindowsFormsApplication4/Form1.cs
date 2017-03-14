@@ -75,14 +75,7 @@ namespace WindowsFormsApplication4
                 {
                     if (e.X > (this.ClientRectangle.Width / 3) * j && e.X < (this.ClientRectangle.Width / 3) * (j + 1) && e.Y > (this.ClientRectangle.Width / 3) * z && e.Y < (this.ClientRectangle.Width / 3) * (z + 1) && a[z, j] == "")
                     {
-                        if (TurnCount % 2 == 0)
-                        {
-                            a[z, j] = "X";
-                        }
-                        else
-                        {
-                            a[z, j] = "O";
-                        }
+                        a[z, j] = TurnCount % 2 == 0 ? "X" : "O";
                         TurnCount++;
                     }
                 }
